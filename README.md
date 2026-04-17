@@ -1,7 +1,35 @@
-# Proyecto_Sprint_7
-Este repositorio es para el proyecto del Sprint 7 del bootcamp análisis  de datos de datos de Triple_Ten 
-Los archivos contenidos en el repositorio son:
-README.md
-app.py
-requirements.txt
-vehicles_us.csv
+# Proyecto Sprint 7 - Dashboard de Vehículos
+
+##  Descripción del proyecto
+Este proyecto consiste en el desarrollo de una aplicación web interactiva utilizando **Streamlit** para el análisis de datos de vehículos en venta.
+
+El objetivo principal es explorar cómo variables como el kilometraje (odómetro) y el precio se relacionan entre sí mediante visualizaciones interactivas.
+
+---
+
+##  Tecnologías utilizadas
+
+- Python
+- Streamlit
+- Pandas
+- Plotly Express
+
+---
+
+## Dataset
+
+El archivo CSV contiene información sobre vehículos en venta, incluyendo variables como:
+
+- Precio (`price`)
+- Kilometraje (`odometer`)
+- Año (`model_year`)
+- Condición (`condition`)
+- Tipo de vehículo (`type`)
+
+---
+
+##  Cómo ejecutar el proyecto
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/lilia-flores/Proyecto_Sprint_7.git
