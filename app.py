@@ -12,11 +12,30 @@ df = pd.read_csv("vehicles_us.csv")
 st.write("Vista previa del conjunto de datos:")
 st.write(df.head())
 
-# Botón para construir el histograma
-if st.button("Mostrar histograma del odómetro"):
-    fig = px.histogram(
+#Ajusta el histograma
+if st.button("Mostrar histograma de precios"):
+    fig_hist = px.histogram(
+        df,
+        x="price",
+        nbins=50,
+        labels={"price": "Precio (USD)"},
+        title="Distribución de precios"
+    )
+    st.plotly_chart(fig_hist)
+    
+#Gráfico de dispersión
+if st.button("Mostrar relación precio vs kilometraje"):
+    fig_scatter = px.scatter(
         df,
         x="odometer",
-        title="Distribución del kilometraje de los vehículos"
+        y="price",
+        labels={
+            "odometer": "Kilometraje",
+            "price": "Precio (USD)"
+        },
+        title="Relación entre kilometraje y precio",
+        opacity=0.5
     )
-    st.plotly_chart(fig)
+    st.plotly_chart(fig_scatter)
+
+streamlit run app.py
